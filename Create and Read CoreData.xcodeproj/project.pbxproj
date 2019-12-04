@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		9AA943D823977C5B0042D5CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA943D723977C5B0042D5CC /* AppDelegate.swift */; };
 		9AA943DA23977C5B0042D5CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA943D923977C5B0042D5CC /* ViewController.swift */; };
-		9AA943DD23977C5B0042D5CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AA943DB23977C5B0042D5CC /* Main.storyboard */; };
 		9AA943E023977C5B0042D5CC /* Create_and_Read_CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9AA943DE23977C5B0042D5CC /* Create_and_Read_CoreData.xcdatamodeld */; };
 		9AA943E223977C5C0042D5CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AA943E123977C5C0042D5CC /* Assets.xcassets */; };
 		9AA943E523977C5C0042D5CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AA943E323977C5C0042D5CC /* LaunchScreen.storyboard */; };
+		9AA943EE23977E120042D5CC /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA943EC23977E120042D5CC /* User+CoreDataClass.swift */; };
+		9AA943EF23977E120042D5CC /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA943ED23977E120042D5CC /* User+CoreDataProperties.swift */; };
+		9AA943F123977FE10042D5CC /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA943F023977FE10042D5CC /* PersistenceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9AA943D423977C5B0042D5CC /* Create and Read CoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Create and Read CoreData.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AA943D723977C5B0042D5CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AA943D923977C5B0042D5CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9AA943DC23977C5B0042D5CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9AA943DF23977C5B0042D5CC /* Create_and_Read_CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Create_and_Read_CoreData.xcdatamodel; sourceTree = "<group>"; };
 		9AA943E123977C5C0042D5CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9AA943E423977C5C0042D5CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9AA943E623977C5C0042D5CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AA943EC23977E120042D5CC /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9AA943ED23977E120042D5CC /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9AA943F023977FE10042D5CC /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +60,15 @@
 		9AA943D623977C5B0042D5CC /* Create and Read CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				9AA943EC23977E120042D5CC /* User+CoreDataClass.swift */,
+				9AA943ED23977E120042D5CC /* User+CoreDataProperties.swift */,
 				9AA943D723977C5B0042D5CC /* AppDelegate.swift */,
 				9AA943D923977C5B0042D5CC /* ViewController.swift */,
-				9AA943DB23977C5B0042D5CC /* Main.storyboard */,
 				9AA943E123977C5C0042D5CC /* Assets.xcassets */,
 				9AA943E323977C5C0042D5CC /* LaunchScreen.storyboard */,
 				9AA943E623977C5C0042D5CC /* Info.plist */,
 				9AA943DE23977C5B0042D5CC /* Create_and_Read_CoreData.xcdatamodeld */,
+				9AA943F023977FE10042D5CC /* PersistenceManager.swift */,
 			);
 			path = "Create and Read CoreData";
 			sourceTree = "<group>";
@@ -127,7 +133,6 @@
 			files = (
 				9AA943E523977C5C0042D5CC /* LaunchScreen.storyboard in Resources */,
 				9AA943E223977C5C0042D5CC /* Assets.xcassets in Resources */,
-				9AA943DD23977C5B0042D5CC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +145,9 @@
 			files = (
 				9AA943DA23977C5B0042D5CC /* ViewController.swift in Sources */,
 				9AA943D823977C5B0042D5CC /* AppDelegate.swift in Sources */,
+				9AA943EE23977E120042D5CC /* User+CoreDataClass.swift in Sources */,
+				9AA943F123977FE10042D5CC /* PersistenceManager.swift in Sources */,
+				9AA943EF23977E120042D5CC /* User+CoreDataProperties.swift in Sources */,
 				9AA943E023977C5B0042D5CC /* Create_and_Read_CoreData.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +155,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9AA943DB23977C5B0042D5CC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9AA943DC23977C5B0042D5CC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9AA943E323977C5C0042D5CC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

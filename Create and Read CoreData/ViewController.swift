@@ -10,16 +10,52 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let persistenceManager: PersistenceManager
+    init(persistenceManager: PersistenceManager) {
+        self.persistenceManager = persistenceManager
+        super.init(nibName: nil, bundle: nil)
+    
+    }
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    
+             createUser()
+             getUsers()
     }
+        
+        // Create coredata object
+        func createUser() {
+            let user = User(context: persistenceManager.context)
+            user.name = "Andrew"
+            
+            persistenceManager.save()
+        }
+    
+    
+    func getUsers() {
+       
+       // guard  let users = try! persistenceManager.context.fetch(User.fetchRequest()) as? [User]
+        //else { return }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        let users = persistenceManager.fetch(User.self  )
+        
+        users.forEach({ print($0.name) })
+        
+        }
     }
+    
+    
 
 
-}
+    
+
+
+
 
